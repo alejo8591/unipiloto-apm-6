@@ -1,0 +1,11 @@
+<div>
+	<input type="text" #firstName placeholder="Primero nombre">
+	<input type="text" #lastName placeholder="Apellidos">
+	<button (click)="saveFirstName(firstName.value)">Guardar NOmbre</button>
+	<button (click)="saveLastName(lastName.value)">Guardar Apellido</button>
+	<button (click)="delete()">Eliminar</button>
+
+	<li *ngFor="let i of items | async">
+      {{ i.$value }}
+    </li>
+</div>
